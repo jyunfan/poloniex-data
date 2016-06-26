@@ -40,6 +40,8 @@ def get_data(pair):
     else:
         df.to_csv(outf, index=False, cols=COLUMNS, header=False)
     outf.close()
+    print("Finish.")
+    time.sleep(30)
 
 
 def main():
@@ -50,9 +52,9 @@ def main():
     pairs = [pair for pair in df.columns if pair.startswith('BTC')]
     print(pairs)
 
-    for pair in df.columns:
+    for pair in pairs:
         get_data(pair)
-        time.sleep(60)
+        time.sleep(2)
 
 if __name__ == '__main__':
     main()
