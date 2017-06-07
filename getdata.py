@@ -36,9 +36,9 @@ def get_data(pair):
     ft.close()
     outf = open(datafile, "a")
     if newfile:
-        df.to_csv(outf, index=False, cols=COLUMNS)
+        df.to_csv(outf, index=False, columns=COLUMNS)
     else:
-        df.to_csv(outf, index=False, cols=COLUMNS, header=False)
+        df.to_csv(outf, index=False, columns=COLUMNS, header=False)
     outf.close()
     print("Finish.")
     time.sleep(30)
